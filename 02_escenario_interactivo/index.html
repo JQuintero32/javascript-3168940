@@ -2,38 +2,37 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escenario Interactivo</title>
+  <meta name="viewport" content="width=750, height=500">
+  <title>Minijuego del Cielo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="escenario">
+  <div class="juego">
+    <img src="fondo.jpg" alt="Cielo" class="fondo">
+
+    <img src="sol.png" alt="Sol" class="sol">
+    <img src="nube.png" alt="Nube" class="nube">
+
+    <img src="globo1.png" alt="Globo 1" class="globo globo1">
+    <img src="globo2.png" alt="Globo 2" class="globo globo2">
+    <img src="globo3.png" alt="Globo 3" class="globo globo3">
+
+    <img src="corazon.png" alt="Corazón" class="corazon">
+
     <div class="contador">
-      <div class="contador-item">
-        <img src="globo.png" alt="globos" class="icono">
+      <div class="item-contador">
+        <img src="globo.png" alt="Icono globo" class="icono">
         <span id="contadorGlobos">0</span>
       </div>
-      <div class="contador-item">
-        <img src="corazon.png" alt="corazones" class="icono">
-        <span id="contadorCorazones">0</span>
+      <div class="item-contador">
+        <img src="corazon.png" alt="Icono corazón" class="icono">
+        <span id="contadorCorazon">0</span>
       </div>
     </div>
 
-    <!-- Nube animada -->
-    <img src="nube.png" alt="nube" class="nube animable">
-
-    <!-- Globos clickeables -->
-    <img src="globo1.png" alt="globo amarillo" class="globo clickeable globo1">
-    <img src="globo2.png" alt="globo azul" class="globo clickeable globo2">
-    <img src="globo3.png" alt="globo verde" class="globo clickeable globo3">
-
-    <!-- Corazón clickeable -->
-    <img src="corazon.png" alt="corazon" class="corazon clickeable">
-
-    <!-- Sol -->
-    <img src="sol.png" alt="sol" class="sol animable">
+    <div class="mensaje" id="mensajeFinal">¡Bien hecho!</div>
   </div>
 
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
