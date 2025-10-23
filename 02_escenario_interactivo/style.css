@@ -1,11 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden; 
   display: flex;
   justify-content: center;
+  flex-direction: column; 
   align-items: center;
-  height: 100vh;
   background: #87ceeb;
 }
 
@@ -13,10 +13,12 @@ body {
   position: relative;
   width: 750px;
   height: 500px;
+  margin: 20px 0; 
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
+
 
 .fondo {
   position: absolute;
@@ -133,3 +135,22 @@ body {
     transform: scale(0);
   }
 }
+
+/* Escenario 2 */
+.escenario2 .berenjena1 { bottom: 50px; left: 50px; width: 80px; position: absolute; cursor: pointer; }
+.escenario2 .berenjena2 { bottom: 50px; left: 150px; width: 80px; position: absolute; cursor: pointer; }
+.escenario2 .berenjena3 { bottom: 50px; left: 250px; width: 80px; position: absolute; cursor: pointer; }
+.escenario2 .berenjena4 { bottom: 50px; left: 350px; width: 80px; position: absolute; cursor: pointer; }
+
+.escenario2 .oruga { bottom: 150px; left: 500px; width: 100px; position: absolute; }
+.escenario2 .lombriz { bottom: 100px; left: 600px; width: 100px; position: absolute; }
+
+/* Escenario 3 */
+.escenario3 .copo1 { bottom: 400px; left: 100px; width: 50px; position: absolute; cursor: pointer; }
+.escenario3 .copo2 { bottom: 350px; left: 200px; width: 50px; position: absolute; cursor: pointer; }
+.escenario3 .copo3 { bottom: 300px; left: 300px; width: 50px; position: absolute; cursor: pointer; }
+.escenario3 .copo4 { bottom: 250px; left: 400px; width: 50px; position: absolute; cursor: pointer; }
+
+.escenario3 .iglu { bottom: 50px; left: 150px; width: 150px; position: absolute; }
+.escenario3 .hombreNieve { bottom: 50px; left: 400px; width: 150px; position: absolute; }
+

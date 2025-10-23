@@ -8,24 +8,24 @@
 </head>
 <body>
   <div class="juego">
-    <img src="fondo.jpg" alt="Cielo" class="fondo">
+    <img src="./assets/fondo.jpg" alt="Cielo" class="fondo">
 
-    <img src="sol.png" alt="Sol" class="sol">
-    <img src="nube.png" alt="Nube" class="nube">
+    <img src="./assets/sol.png" alt="Sol" class="sol">
+    <img src="./assets/nube.png" alt="Nube" class="nube">
 
-    <img src="globo1.png" alt="Globo 1" class="globo globo1">
-    <img src="globo2.png" alt="Globo 2" class="globo globo2">
-    <img src="globo3.png" alt="Globo 3" class="globo globo3">
+    <img src="./assets/globo1.png" alt="Globo 1" class="globo globo1">
+    <img src="./assets/globo2.png" alt="Globo 2" class="globo globo2">
+    <img src="./assets/globo3.png" alt="Globo 3" class="globo globo3">
 
-    <img src="corazon.png" alt="Corazón" class="corazon">
+    <img src="./assets/corazon.png" alt="Corazón" class="corazon">
 
     <div class="contador">
       <div class="item-contador">
-        <img src="globo.png" alt="Icono globo" class="icono">
+        <img src="./assets/globo.png" alt="Icono globo" class="icono">
         <span id="contadorGlobos">0</span>
       </div>
       <div class="item-contador">
-        <img src="corazon.png" alt="Icono corazón" class="icono">
+        <img src="./assets/corazon.png" alt="Icono corazón" class="icono">
         <span id="contadorCorazon">0</span>
       </div>
     </div>
@@ -34,5 +34,57 @@
   </div>
 
   <script src="./app.js"></script>
+
+  <!-- Escenario 2 -->
+<div class="juego escenario2">
+  <img src="./assets/fondo-huerto.jpg" alt="Fondo huerto" class="fondo">
+
+  <!-- Animables -->
+  <img src="./assets/oruga.webp" alt="Oruga" class="oruga">
+  <img src="./assets/lombriz.webp" alt="Lombriz" class="lombriz">
+
+  <!-- Berenjenas -->
+  <img src="./assets/berenjena.webp" alt="Berenjena 1" class="berenjena1">
+  <img src="./assets/berenjena.webp" alt="Berenjena 2" class="berenjena2">
+  <img src="./assets/berenjena.webp" alt="Berenjena 3" class="berenjena3">
+  <img src="./assets/berenjena.webp" alt="Berenjena 4" class="berenjena4">
+
+  <!-- Contador -->
+  <div class="contador">
+    <div class="item-contador">
+      <img src="./assets/berenjena.webp" alt="Icono berenjena" class="icono">
+      <span id="contadorBerenjena">0</span>
+    </div>
+  </div>
+
+  <div class="mensaje" id="mensajeFinalEsc2">¡Bien hecho!</div>
+</div>
+
+<!-- Escenario 3 -->
+<div class="juego escenario3">
+  <img src="./assets/fondo-nieve.webp" alt="Fondo nevado" class="fondo">
+
+  <!-- Animables -->
+  <img src="./assets/iglu.webp" alt="Iglú" class="iglu">
+  <img src="./assets/hombre-nieve.webp" alt="Hombre de nieve" class="hombreNieve">
+
+  <!-- Copos de nieve -->
+  <img src="./assets/copo.webp" alt="Copo 1" class="copo1">
+  <img src="./assets/copo.webp" alt="Copo 2" class="copo2">
+  <img src="./assets/copo.webp" alt="Copo 3" class="copo3">
+  <img src="./assets/copo.webp" alt="Copo 4" class="copo4">
+
+  <!-- Contador -->
+  <div class="contador">
+    <div class="item-contador">
+      <img src="./assets/copo.webp" alt="Icono copo" class="icono">
+      <span id="contadorCopo">0</span>
+    </div>
+  </div>
+
+  <div class="mensaje" id="mensajeFinalEsc3">¡Bien hecho!</div>
+</div>
+
+
 </body>
 </html>
