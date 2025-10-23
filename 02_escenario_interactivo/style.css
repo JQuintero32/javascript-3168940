@@ -137,10 +137,10 @@ body {
 }
 
 /* Escenario 2 */
-.escenario2 .berenjena1 { bottom: 50px; left: 50px; width: 80px; position: absolute; cursor: pointer; }
-.escenario2 .berenjena2 { bottom: 50px; left: 150px; width: 80px; position: absolute; cursor: pointer; }
-.escenario2 .berenjena3 { bottom: 50px; left: 250px; width: 80px; position: absolute; cursor: pointer; }
-.escenario2 .berenjena4 { bottom: 50px; left: 350px; width: 80px; position: absolute; cursor: pointer; }
+.escenario2 .berenjena1 { top: 50px; left: 50px; width: 80px; position: absolute; cursor: pointer; }
+.escenario2 .berenjena2 { top: 50px; left: 150px; width: 80px; position: absolute; cursor: pointer; }
+.escenario2 .berenjena3 { top: 50px; left: 250px; width: 80px; position: absolute; cursor: pointer; }
+.escenario2 .berenjena4 { top: 150px; left: 155px; width: 80px; position: absolute; cursor: pointer; }
 
 .escenario2 .oruga { bottom: 150px; left: 500px; width: 100px; position: absolute; }
 .escenario2 .lombriz { bottom: 100px; left: 600px; width: 100px; position: absolute; }
@@ -153,4 +153,3 @@ body {
 
 .escenario3 .iglu { bottom: 50px; left: 150px; width: 150px; position: absolute; }
 .escenario3 .hombreNieve { bottom: 50px; left: 400px; width: 150px; position: absolute; }
-
