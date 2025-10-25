@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background: #87ceeb;
+}
+
+.juego {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.fondo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* === ANIMACIONES === */
+@keyframes girarSol {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes moverNube {
+  0% { left: -250px; }
+  50% { left: 700px; }
+  100% { left: -250px; }
+}
+
+@keyframes caerRapido {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(400px); opacity: 0; }
+}
+
+/* === ESCENARIO 1 === */
+.sol {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  width: 100px;
+  animation: girarSol 12s linear infinite;
+}
+
+.nube {
+  position: absolute;
+  top: 80px;
+  left: -200px;
+  width: 180px;
+  animation: moverNube 25s linear infinite;
+}
+
+.globo {
+  position: absolute;
+  width: 90px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.globo:hover { transform: scale(1.1); }
+.globo1 { bottom: 80px; left: 100px; }
+.globo2 { bottom: 120px; left: 300px; }
+.globo3 { bottom: 70px; left: 550px; }
+
+.corazon {
+  position: absolute;
+  bottom: 250px;
+  left: 320px;
+  width: 80px;
+  cursor: pointer;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.contador {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-contador {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.icono {
+  width: 28px;
+  height: 28px;
+}
+
+.mensaje {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: #ff0000;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px 30px;
+  border-radius: 10px;
+  display: none;
+  font-weight: bold;
+}
+
+/* === ESCENARIO 2 === */
+.berenjena {
+  position: absolute;
+  width: 80px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+.berenjena:hover { filter: brightness(1.3); }
+.berenjena1 { top: 100px; left: 80px; }
+.berenjena2 { top: 30px; left: 230px; }
+.berenjena3 { top: 140px; left: 210px; }
+.berenjena4 { top: 20px; left: 120px; }
+
+.gusano, .lombriz {
+  position: absolute;
+  width: 100px;
+  animation: moverse 6s linear infinite;
+}
+@keyframes moverse {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(100px); }
+  100% { transform: translateX(0); }
+}
+.gusano { bottom: 80px; left: 120px; }
+.lombriz { bottom: 60px; left: 450px; }
+
+/* === ESCENARIO 3 === */
+.copo {
+  position: absolute;
+  width: 70px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+.copo:hover { filter: brightness(1.3); }
+.copo1 { top: 90px; left: 120px; }
+.copo2 { top: 80px; left: 300px; }
+.copo3 { top: 110px; left: 500px; }
+.copo4 { top: 130px; left: 640px; }
+
+.iglu, .hombreNieve {
+  position: absolute;
+  width: 120px;
+  animation: balancear 4s ease-in-out infinite;
+}
+
+@keyframes respirarNieve {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.hombre-nieve {
+  animation: respirarNieve 2.5s infinite ease-in-out;
+  transform-origin: center bottom;
+}
+
+@keyframes balancear {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(4deg); }
+}
+.iglu { bottom: 60px; left: 120px; }
+.hombreNieve { bottom: 70px; left: 500px; }
+
+/* === SEPARACIÓN ENTRE ESCENARIOS === */
+.espacio {
+  height: 100px;
+}
+
+/* === EFECTO DE CAÍDA === */
+.caer {
+  animation: caerRapido 0.9s forwards;
+}
+
