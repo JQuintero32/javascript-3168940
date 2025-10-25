@@ -3,88 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=750, height=500">
-  <title>Minijuego del Cielo</title>
+  <title>Minijuego Multiescenario</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="juego">
-    <img src="./assets/fondo.jpg" alt="Cielo" class="fondo">
 
-    <img src="./assets/sol.png" alt="Sol" class="sol">
-    <img src="./assets/nube.png" alt="Nube" class="nube">
+  <!-- === ESCENARIO 1 === -->
+  <div class="juego" id="escenario1">
+    <img src="./assets/fondo.jpg" class="fondo">
+    <img src="./assets/sol.png" class="sol">
+    <img src="./assets/nube.png" class="nube">
 
-    <img src="./assets/globo1.png" alt="Globo 1" class="globo globo1">
-    <img src="./assets/globo2.png" alt="Globo 2" class="globo globo2">
-    <img src="./assets/globo3.png" alt="Globo 3" class="globo globo3">
-
-    <img src="./assets/corazon.png" alt="Corazón" class="corazon">
+    <img src="./assets/globo1.png" class="globo globo1">
+    <img src="./assets/globo2.png" class="globo globo2">
+    <img src="./assets/globo3.png" class="globo globo3">
+    <img src="./assets/corazon.png" class="corazon">
 
     <div class="contador">
       <div class="item-contador">
-        <img src="./assets/globo.png" alt="Icono globo" class="icono">
+        <img src="./assets/globo.png" class="icono">
         <span id="contadorGlobos">0</span>
       </div>
       <div class="item-contador">
-        <img src="./assets/corazon.png" alt="Icono corazón" class="icono">
+        <img src="./assets/corazon.png" class="icono">
         <span id="contadorCorazon">0</span>
       </div>
     </div>
-
-    <div class="mensaje" id="mensajeFinal">¡Bien hecho!</div>
+    <div class="mensaje" id="mensaje1">¡Bien hecho!</div>
   </div>
 
-  <script src="./app.js"></script>
+  <div class="espacio"></div>
 
-  <!-- Escenario 2 -->
-<div class="juego escenario2">
-  <img src="./assets/fondo-huerto.jpg" alt="Fondo huerto" class="fondo">
+  <!-- === ESCENARIO 2 === -->
+  <div class="juego" id="escenario2">
+    <img src="./assets/fondo2.jpg" class="fondo">
+    <img src="./assets/berenjena.png" class="berenjena berenjena1">
+    <img src="./assets/berenjena.png" class="berenjena berenjena2">
+    <img src="./assets/berenjena.png" class="berenjena berenjena3">
+    <img src="./assets/berenjena.png" class="berenjena berenjena4">
 
-  <!-- Animables -->
-  <img src="./assets/oruga.webp" alt="Oruga" class="oruga">
-  <img src="./assets/lombriz.webp" alt="Lombriz" class="lombriz">
+    <img src="./assets/gusano.png" class="gusano">
+    <img src="./assets/lombriz.png" class="lombriz">
 
-  <!-- Berenjenas -->
-  <img src="./assets/berenjena.webp" alt="Berenjena 1" class="berenjena1">
-  <img src="./assets/berenjena.webp" alt="Berenjena 2" class="berenjena2">
-  <img src="./assets/berenjena.webp" alt="Berenjena 3" class="berenjena3">
-  <img src="./assets/berenjena.webp" alt="Berenjena 4" class="berenjena4">
-
-  <!-- Contador -->
-  <div class="contador">
-    <div class="item-contador">
-      <img src="./assets/berenjena.webp" alt="Icono berenjena" class="icono">
-      <span id="contadorBerenjena">0</span>
+    <div class="contador">
+      <div class="item-contador">
+        <img src="./assets/berenjena.png" class="icono">
+        <span id="contadorBerenjena">0</span>
+      </div>
     </div>
   </div>
 
-  <div class="mensaje" id="mensajeFinalEsc2">¡Bien hecho!</div>
-</div>
+  <div class="espacio"></div>
 
-<!-- Escenario 3 -->
-<div class="juego escenario3">
-  <img src="./assets/fondo-nieve.webp" alt="Fondo nevado" class="fondo">
+  <!-- === ESCENARIO 3 === -->
+  <div class="juego" id="escenario3">
+    <img src="./assets/fondo3.png" class="fondo">
+    <img src="./assets/copo.png" class="copo copo1">
+    <img src="./assets/copo.png" class="copo copo2">
+    <img src="./assets/copo.png" class="copo copo3">
+    <img src="./assets/copo.png" class="copo copo4">
 
-  <!-- Animables -->
-  <img src="./assets/iglu.webp" alt="Iglú" class="iglu">
-  <img src="./assets/hombre-nieve.webp" alt="Hombre de nieve" class="hombreNieve">
+    <img src="./assets/iglu.png" class="iglu">
+    <img src="./assets/hombreNieve.png" class="hombreNieve">
 
-  <!-- Copos de nieve -->
-  <img src="./assets/copo.png" alt="Copo 1" class="copo1">
-  <img src="./assets/copo.png" alt="Copo 2" class="copo2">
-  <img src="./assets/copo.png" alt="Copo 3" class="copo3">
-  <img src="./assets/copo.png" alt="Copo 4" class="copo4">
-
-  <!-- Contador -->
-  <div class="contador">
-    <div class="item-contador">
-      <img src="./assets/copo.png" alt="Icono copo" class="icono">
-      <span id="contadorCopo">0</span>
+    <div class="contador">
+      <div class="item-contador">
+        <img src="./assets/copo.png" class="icono">
+        <span id="contadorCopo">0</span>
+      </div>
     </div>
   </div>
 
-  <div class="mensaje" id="mensajeFinalEsc3">¡Bien hecho!</div>
-</div>
-
-
+  <script src="app.js"></script>
 </body>
 </html>
