@@ -23,7 +23,7 @@ corazon.addEventListener("click", () => {
   }
 });
 
-// === ESCENARIO 2 ===
+/* // === ESCENARIO 2 ===
 let contadorBerenjena = 0;
 document.querySelectorAll(".berenjena").forEach(berenjena => {
   berenjena.addEventListener("click", () => {
@@ -47,4 +47,4 @@ document.querySelectorAll(".copo").forEach(copo => {
       setTimeout(() => copo.classList.remove("caer"), 5000);
     }
   });
-});
+}); */

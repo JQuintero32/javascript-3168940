@@ -194,3 +194,80 @@ body {
   animation: caerRapido 0.9s forwards;
 }
 
+.galeria {
+  width: 750px;
+  height: 500px;
+  margin: 60px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+ .escena {
+  width: 750px;
+  height: 500px;
+  border-radius: 15px;
+  overflow:hidden;
+  box-shadow: 0 0 15px rgba (0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  position: relative;
+ }
+
+ .imagen-escena {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+ }
+
+.miniaturas{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+ .miniatura {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, border 0.3s;
+  border: 3px solid transparent;
+}
+
+.miniatura:hover {
+  transform: scale(1.05);
+  border-color: #fff;
+}
+
+.miniatura.activa {
+  border-color: #ffeb3b;
+  transform: scale(1.1);
+}
+
+.flecha {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s transform 0.3s;
+}
+
+.flecha:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.flecha.izquierda{
+left: 15px;
+}
+
+.flecha.derecha{
+  right: 15px;
+}
