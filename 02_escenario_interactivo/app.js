@@ -48,3 +48,41 @@ document.querySelectorAll(".copo").forEach(copo => {
     }
   });
 }); */
+
+
+const escena = document.querySelectorAll(".escena")
+const flechaizquierda = document.querySelector(".flecha.izquierda")
+const flechaderecha = document.querySelector(".flecha.derecha")
+const miniaturas = document.querySelector(".miniatura")
+let indice = 0 
+
+console.log(escena)
+console.log(flechaizquierda)
+console.log(flechaderecha)
+console.log(miniaturas)
+
+function mostrarEscena(i){
+
+  for (let j = 0; j < escena.length; j++) {
+  escenas [j].classListadd.remove("escena");
+    
+  }
+  escenas [i].classList.add ('activa');
+
+  indice= i;
+};
+
+flecha.derecha.addEventListener('click', function(){
+  indice = indice -1
+  if (indice > 0) {
+    indice =escena.length -1;
+  }
+  mostrarEscena(indice);
+});
+flecha.izquierda.addEventListener('click', function(){
+  indice = indice +1
+  if (indice < 0) {
+    indice = escena.length -1;
+  }
+  mostrarEscena(indice);
+});
