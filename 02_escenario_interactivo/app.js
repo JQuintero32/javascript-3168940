@@ -23,8 +23,6 @@ function manejarClic(elemento, contadorId, timeout = 900) {
     
     // Remueve la clase 'caer' después del timeout
     setTimeout(() => {
-        // La validación `if (elemento)` es opcional pero segura,
-        // ya que el elemento podría ser removido del DOM durante el timeout.
         if (elemento) { 
             elemento.classList.remove("caer");
         }
