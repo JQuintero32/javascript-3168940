@@ -17,7 +17,7 @@ body {
 }
 
 .fondo {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -196,28 +196,24 @@ body {
 
 .galeria {
   width: 750px;
-  height: 500px;
+  /* Importante: permite que las flechas se posicionen con respecto a este contenedor */
+  position: relative; 
+  /* Nota: la altura de 500px no es necesaria aquí, el contenido la define */
   margin: 60px auto;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
- .escena {
+.escena {
   width: 750px;
   height: 500px;
   border-radius: 15px;
   overflow:hidden;
-  box-shadow: 0 0 15px rgba (0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
   position: relative;
-  display: none;
- }
-
- .imagen-escena {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.5s ease-in-out;
+  /* ESTO ES CLAVE: tu CSS ya define que esté oculta */
+  display: none; 
  }
 
 .miniaturas{
@@ -236,16 +232,17 @@ body {
   border: 3px solid transparent;
 }
 
-.miniatura:hover {
-  transform: scale(1.05);
-  border-color: #fff;
+.escena.activa {
+  display: block;
 }
 
+
+
 .miniatura.activa {
-  display: block;
+  /* ESTO ES CLAVE: tu CSS ya define que se resalte */
   border-color: #ffeb3b;
   transform: scale(1.1);
-}
+  }
 
 .flecha {
   position: absolute;
@@ -258,7 +255,8 @@ body {
   padding: 8px 15px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s transform 0.3s;
+  transition: background 0.3s, transform 0.3s;
+  z-index: 10; 
 }
 
 .flecha:hover {
@@ -267,9 +265,15 @@ body {
 }
 
 .flecha.izquierda{
-left: 55px;
+left: 0px;
 }
 
 .flecha.derecha{
-  right: 55px;
+  right: 0px;
 }
+
+
+
+
+
+
