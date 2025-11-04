@@ -25,7 +25,7 @@ const contadores = {
 function manejarClic(elemento, contadorId, timeout = 900) { 
   if (!elemento.classList.contains("caer")) {
     
-    // ⬇️ LÓGICA DE AUDIO ESPECÍFICO 
+    // LÓGICA DE AUDIO ESPECÍFICO 
     const sound = clickSounds[contadorId];
     if (sound) {
         
@@ -39,7 +39,6 @@ function manejarClic(elemento, contadorId, timeout = 900) {
     // Incrementa el contador y actualiza el DOM
     contadores[contadorId]++;
     document.getElementById(contadorId).textContent = contadores[contadorId];
-  
   }
 }
 
