@@ -1,6 +1,5 @@
 // === CONTADORES GLOBALES Y CONFIGURACIÓN ===
 
-
 const clickSounds = {
     contadorGlobos: new Audio('./assets/globo_click.mp3'),
     contadorCorazon: new Audio('./assets/corazon_click.mp3'),
