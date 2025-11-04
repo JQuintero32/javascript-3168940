@@ -1,4 +1,13 @@
 // === CONTADORES GLOBALES Y CONFIGURACIÓN ===
+
+
+const clickSounds = {
+    contadorGlobos: new Audio('./assets/globo_click.mp3'),
+    contadorCorazon: new Audio('./assets/corazon_click.mp3'),
+    contadorBerenjena: new Audio('./assets/berenjena_click.mp3'),
+    contadorCopo: new Audio('./assets/copo_click.mp3')
+};
+
 let contadorGlobos = 0;
 let contadorCorazon = 0;
 let contadorBerenjena = 0;
@@ -15,18 +24,22 @@ const contadores = {
 // --- FUNCIÓN DE UTILIDAD DE CLIC ---
 function manejarClic(elemento, contadorId, timeout = 900) { 
   if (!elemento.classList.contains("caer")) {
+    
+    // ⬇️ LÓGICA DE AUDIO ESPECÍFICO 
+    const sound = clickSounds[contadorId];
+    if (sound) {
+        
+        sound.currentTime = 0; 
+        sound.play();
+    }
+    // FIN LÓGICA DE AUDIO 
+
     elemento.classList.add("caer");
     
     // Incrementa el contador y actualiza el DOM
     contadores[contadorId]++;
     document.getElementById(contadorId).textContent = contadores[contadorId];
-    
-    // Remueve la clase 'caer' después del timeout
-    setTimeout(() => {
-        if (elemento) { 
-            elemento.classList.remove("caer");
-        }
-    }, timeout);
+  
   }
 }
 
