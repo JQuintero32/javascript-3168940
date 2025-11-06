@@ -1,17 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Helena la Princesa Ronca de Oro</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="">
 </head>
-<body>
-    
+<body class="site">
 
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__left">
+      <div class="brand">
+        <img src="" alt="Logo" class="brand__logo" />
+        <span class="brand__title">Helenía</span>
+      </div>
+    </div>
 
+    <nav class="header__nav" aria-label="Navegación principal">
+      <a href="#" class="nav__item active">Inicio</a>
+      <a href="#" class="nav__item">Capítulos</a>
+      <a href="#" class="nav__item">Créditos</a>
+      <a href="#" class="nav__item">Contacto</a>
+    </nav>
 
+    <div class="header__right">
+      <button class="icon-btn" aria-label="Buscar">🔍</button>
+      <button class="icon-btn" aria-label="Perfil">👤</button>
+    </div>
+  </header>
 
-    <script src="app.js"></script>
+  <!-- HERO -->
+  <main>
+    <section class="hero" aria-labelledby="titulo-comic">
+      <div class="hero__bg" style="background-image: url('portada_principal.jpg');"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <div class="hero__meta">
+          <span class="tag">Drama musical</span>
+          <span class="dot">•</span>
+          <span class="tag">2025</span>
+          <span class="dot">•</span>
+          <span class="tag">3 capítulos</span>
+        </div>
+
+        <h1 id="titulo-comic" class="hero__title">La Princesa Ronca de Oro</h1>
+
+        <p class="hero__desc">
+          Helena, una princesa nacida bajo una tormenta, desafía las normas de su reino para seguir su verdadera pasión: el canto.
+          A través de su voz enfrenta prejuicios, amores y traiciones; su legado trascenderá el tiempo como símbolo de libertad y
+          empoderamiento femenino.
+        </p>
+
+        <div class="hero__actions">
+          <button class="btn btn--primary">Reproducir</button>
+        </div>
+
+        <div class="hero__meta-low">
+          <span><strong>Autores:</strong> Juan, Caleb y Geraldine</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROW: Capítulos -->
+    <section class="panel" aria-labelledby="capitulos">
+      <div class="panel__header">
+        <h2 id="capitulos">Capítulos</h2>
+      </div>
+
+      <div class="scroller" role="list">
+        <article class="card" role="listitem">
+          <div class="card__thumb" style="background-image: url('capitulo1.jpg');"></div>
+          <div class="card__body">
+            <h3 class="card__title">1. El surgimiento de la gran voz</h3>
+            <p class="card__text">En una noche tormentosa nace Helena; desde niña sueña con cantar y su voz comienza a brillar en los mercados.</p>
+            <div class="card__cta">
+              <button class="mini">Ver capítulo</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="card__thumb" style="background-image: url('capitulo2.jpg');"></div>
+          <div class="card__body">
+            <h3 class="card__title">2. Romance, rebelión y traición</h3>
+            <p class="card__text">Triunfos en el teatro, un amor traicionero y la transformación de Helena en un himno de rebeldía.</p>
+            <div class="card__cta">
+              <button class="mini">Ver capítulo</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="card__thumb" style="background-image: url('capitulo3.jpg');"></div>
+          <div class="card__body">
+            <h3 class="card__title">3. El legado del eco dorado</h3>
+            <p class="card__text">Helena enseña a otras mujeres: su voz se convierte en legado y el Grimorio Musical preserva su enseñanza.</p>
+            <div class="card__cta">
+              <button class="mini">Ver capítulo</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__left">
+        <strong>La Princesa Ronca de Oro</strong> · 2024 · Drama musical
+      </div>
+      <div class="footer__right">
+        <small>Autores: Juan, Caleb y Geral</small>
+      </div>
+    </footer>
+  </main>
+
     <script src="bd.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
