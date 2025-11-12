@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Helena la Princesa Ronca de Oro</title>
+  <title>La Princesa Ronca de Oro</title>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="site">
+<body>
 
   <!-- HEADER -->
   <header class="header">
-    <div class="header__left">
-      <div class="brand">
-        <span class="brand__title">Helenía</span>
-      </div>
+    <div class="brand">
+      <span class="brand__title">Helenía</span>
     </div>
 
-    <nav class="header__nav" aria-label="Navegación principal">
-      <a href="#" class="nav__item">Inicio</a>
+    <nav class="header__nav">
+      <a href="#" class="nav__item active">Inicio</a>
       <a href="#" class="nav__item">Capítulos</a>
       <a href="#" class="nav__item">Personajes</a>
       <a href="#" class="nav__item">Contacto</a>
@@ -63,82 +61,70 @@
       </div>
     </section>
 
-    <!-- ROW: Capítulos -->
-    <section class="panel" aria-labelledby="capitulos">
+    <!-- CAPÍTULOS -->
+    <section class="panel">
       <div class="panel__header">
-        <h2 id="capitulos">Capítulos</h2>
+        <h2>Capítulos</h2>
       </div>
 
-      <div class="scroller" role="list">
-        <article class="card" role="listitem">
+      <div class="scroller">
+        <article class="card">
           <div class="card__thumb" style="background-image: url('capitulo1.jpg');"></div>
           <div class="card__body">
             <h3 class="card__title">1. El surgimiento de la gran voz</h3>
             <p class="card__text">En una noche tormentosa nace Helena; desde niña sueña con cantar y su voz comienza a brillar en los mercados.</p>
-            <div class="card__cta">
-              <button class="mini">Ver capítulo</button>
-            </div>
+            <button class="mini">Ver capítulo</button>
           </div>
         </article>
 
-        <article class="card" role="listitem">
+        <article class="card">
           <div class="card__thumb" style="background-image: url('capitulo2.jpg');"></div>
           <div class="card__body">
             <h3 class="card__title">2. Romance, rebelión y traición</h3>
             <p class="card__text">Triunfos en el teatro, un amor traicionero y la transformación de Helena en un himno de rebeldía.</p>
-            <div class="card__cta">
-              <button class="mini">Ver capítulo</button>
-            </div>
+            <button class="mini">Ver capítulo</button>
           </div>
         </article>
 
-        <article class="card" role="listitem">
+        <article class="card">
           <div class="card__thumb" style="background-image: url('capitulo3.jpg');"></div>
           <div class="card__body">
             <h3 class="card__title">3. El legado del eco dorado</h3>
             <p class="card__text">Helena enseña a otras mujeres: su voz se convierte en legado y el Grimorio Musical preserva su enseñanza.</p>
-            <div class="card__cta">
-              <button class="mini">Ver capítulo</button>
-            </div>
+            <button class="mini">Ver capítulo</button>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Personajes -->
-         <section class="panel" aria-labelledby="capitulos">
+    <!-- PERSONAJES -->
+    <section class="panel">
       <div class="panel__header">
-        <h2 id="capitulos">Personajes</h2>
+        <h2>Personajes</h2>
       </div>
 
-      <div class="scroller" role="list">
-        <article class="card" role="listitem">
-          <div class="card__thumb" style="background-image: url('capitulo1.jpg');"></div>
+      <div class="scroller">
+        <article class="card">
+          <div class="card__thumb" style="background-image: url('Helena.png');"></div>
           <div class="card__body">
             <h3 class="card__title">Helena</h3>
             <p class="card__text">Princesa de voz poderosa que desafía las reglas para cantar libremente. Su medallón simboliza su fuerza y legado eterno.</p>
-            <div class="card__cta">
-            </div>
           </div>
         </article>
 
-        <article class="card" role="listitem">
-          <div class="card__thumb" style="background-image: url('capitulo2.jpg');"></div>
+        <article class="card">
+          <div class="card__thumb" style="background-image: url('conde.png');"></div>
           <div class="card__body">
-            <h3 class="card__title">Conde Melodico</h3>
+            <h3 class="card__title">Conde Melódico</h3>
             <p class="card__text">Noble apasionado por la música que descubre el talento de Helena y la impulsa a brillar en los grandes escenarios.</p>
-            <div class="card__cta">
-            </div>
           </div>
         </article>
 
-        <article class="card" role="listitem">
-          <div class="card__thumb" style="background-image: url('capitulo3.jpg');"></div>
+        <article class="card">
+          <div class="card__thumb" style="background-image: url('trovador.png');"></div>
           <div class="card__body">
             <h3 class="card__title">Joven Trovador</h3>
             <p class="card__text">Músico carismático que enamora y traiciona a Helena, encendiendo el fuego que convierte su voz en leyenda.</p>
-            <div class="card__cta">
-            </div>
           </div>
         </article>
       </div>
@@ -150,12 +136,9 @@
         <strong>La Princesa Ronca de Oro</strong> · 2025 · Drama musical
       </div>
       <div class="footer__right">
-        <small>Autores: Juan, Caleb y Geral</small>
+        <small>Autores: Juan, Caleb y Geraldine</small>
       </div>
     </footer>
   </main>
-
-    <script src="bd.js"></script>
-    <script src="app.js"></script>
 </body>
 </html>
