@@ -5,7 +5,25 @@ let comic = {
   "sinopsis": "Helena, una princesa nacida bajo una tormenta, desafía las normas de su reino para seguir su verdadera pasión: el canto. A través de su voz, enfrenta prejuicios, amores y traiciones, convirtiéndose en símbolo de libertad y empoderamiento femenino. Su legado trascenderá el tiempo como La Ronca de Oro, inspirando a otras mujeres a cantar sin miedo.",
   "autores": ["Juan José Quintero", "Geraldine Ramirez", "Caleb Olaya"],
   "portadaComic": "portada_principal.jpg",
-  "year": "",
+  "year": "2025",
+  "Personajes": [
+    {
+      "nombre":"Helena",
+      "descripcion": "Princesa de voz poderosa que desafía las reglas para cantar libremente. Su medallón simboliza su fuerza y legado eterno.",
+      "imagen": "'Helena.png'"
+    },
+        {
+      "nombre":"Conde Melódico",
+      "descripcion": "Noble apasionado por la música que descubre el talento de Helena y la impulsa a brillar en los grandes escenarios.",
+      "imagen": "'conde.png'"
+    },
+        {
+      "nombre":"Joven Trovador",
+      "descripcion": "Músico carismático que enamora y traiciona a Helena, encendiendo el fuego que convierte su voz en leyenda.",
+      "imagen": "'trovador.png'"
+    },
+  ],
+  
   "capitulos": [
     {
       "id": 1,
