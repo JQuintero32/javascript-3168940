@@ -1,54 +1,54 @@
-const infoComic = document.querySelector(".info-Comic")
-
-console.log(infoComic)
+const infoComic = document.querySelector(".info-Comic");
 
 infoComic.innerHTML = `
 <small>${comic.year}</small>
     <h1>${comic.nombreComic}</h1>
     <p>${comic.sinopsis}</p>
-    <p>${comic.genero}</p>
-    `
-const card = document.querySelector(".card")
+    <p>Género: ${comic.genero}</p>
+`;
 
-console.log(card)
 
-cardpersonajes.innerHTML = `
-    <section class="panel">
-      <div class="panel__header">
-        <h2>Personajes</h2>
-      </div>
 
-      <div class="scroller">
-        <article class="card">
-          <div class="card__thumb" style="background-image: url('Helena.png');"></div>
-          <div class="card__body">
-            <h3 class="card__title">Helena</h3>
-            <p class="card__text">Princesa de voz poderosa que desafía las reglas para cantar libremente. Su medallón simboliza su fuerza y legado eterno.</p>
-          </div>
-        </article>
+const scrollerPersonajes = document.querySelector(".scroller");
 
-        <article class="card">
-          <div class="card__thumb" style="background-image: url('conde.png');"></div>
-          <div class="card__body">
-            <h3 class="card__title">Conde Melódico</h3>
-            <p class="card__text">Noble apasionado por la música que descubre el talento de Helena y la impulsa a brillar en los grandes escenarios.</p>
-          </div>
-        </article>
+scrollerPersonajes.innerHTML = '';
 
-        <article class="card">
-          <div class="card__thumb" style="background-image: url('trovador.png');"></div>
-          <div class="card__body">
-            <h3 class="card__title">Joven Trovador</h3>
-            <p class="card__text">Músico carismático que enamora y traiciona a Helena, encendiendo el fuego que convierte su voz en leyenda.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-    `
-    comic.Personajes.forEach( char => {
-        //crear elementos dinamicamente con js
-        const div = document.createElement("div")
-        div.classList.add("personaje")
-        console.log(char.nombre)
-        document.body.innerHTML += `<a src="${char.imagen}" width="200">`
-    });
+comic.Personajes.forEach(char => {
+    const card = document.createElement("article");
+    card.classList.add("card");
+
+    card.innerHTML = `
+        <div class="card__thumb">
+            <img src="${char.imagen}" alt="Imagen de ${char.nombre}" class="personaje-img">
+        </div>
+        
+        <div class="card__body">
+            <h3 class="card__title">${char.nombre}</h3>
+            <p class="card__text">${char.descripcion}</p>
+        </div>
+    `;
+
+    scrollerPersonajes.appendChild(card);
+});
+
+
+
+const listaCapitulos = document.querySelector(".lista-capitulos");
+
+listaCapitulos.innerHTML = '';
+
+comic.capitulos.forEach(capitulo => {
+    const chapterDiv = document.createElement("article");
+    chapterDiv.classList.add("capitulo-item");
+
+    chapterDiv.innerHTML = `
+        <h3>Capítulo ${capitulo.id}: ${capitulo.nombre}</h3>
+        <p><strong>Sinopsis:</strong> ${capitulo.descripcion}</p>
+        <p><strong>Personajes principales:</strong> ${capitulo.personajes}</p>
+        <div class="capitulo-portada">
+            <img src="${capitulo.portada}" alt="Portada del Capítulo ${capitulo.id}" width="150">
+        </div>
+    `;
+
+    listaCapitulos.appendChild(chapterDiv);
+});
