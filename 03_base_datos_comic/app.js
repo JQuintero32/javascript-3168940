@@ -1,6 +1,37 @@
-const scrollerPersonajes = document.querySelector("section:nth-of-type(2) .scroller");
+const heroContainer = document.querySelector("#hero-container");
 
-scrollerPersonajes.innerHTML = '';
+heroContainer.innerHTML = `
+    <div class="hero__bg" style="background-image: url('${comic.portadaComic}');"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+        <div class="hero__meta">
+            <span class="tag">${comic.genero}</span>
+            <span class="dot">•</span>
+            <span class="tag">${comic.year}</span>
+            <span class="dot">•</span>
+            <span class="tag">${comic.numeroEpisodeos} capítulos</span>
+        </div>
+
+        <h1 id="titulo-comic" class="hero__title">${comic.nombreComic}</h1>
+
+        <p class="hero__desc">
+            ${comic.sinopsis}
+        </p>
+
+        <div class="hero__actions">
+            <button class="btn btn--primary">Reproducir</button>
+        </div>
+
+        <div class="hero__meta-low">
+            <span><strong>Autores:</strong> ${comic.autores.join(', ')}</span>
+        </div>
+    </div>
+`;
+
+
+const scrollerPersonajes = document.querySelector("#scroller-personajes"); 
+scrollerPersonajes.innerHTML = ''; // Limpiamos
 
 comic.Personajes.forEach(char => {
     const card = document.createElement("article");
@@ -18,6 +49,24 @@ comic.Personajes.forEach(char => {
     `;
 
     scrollerPersonajes.appendChild(card);
-    
-    console.log(`Personaje agregado: ${char.nombre}`);
+});
+
+
+const scrollerCapitulos = document.querySelector("#scroller-capitulos");
+scrollerCapitulos.innerHTML = ''; 
+
+comic.capitulos.forEach(capitulo => {
+    const card = document.createElement("article");
+    card.classList.add("card");
+
+    card.innerHTML = `
+        <div class="card__thumb" style="background-image: url('${capitulo.portada}');"></div>
+        <div class="card__body">
+            <h3 class="card__title">${capitulo.id}. ${capitulo.nombre}</h3>
+            <p class="card__text">${capitulo.descripcion}</p>
+            <button class="mini">Ver capítulo</button>
+        </div>
+    `;
+
+    scrollerCapitulos.appendChild(card);
 });

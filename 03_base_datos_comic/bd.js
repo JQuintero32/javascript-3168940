@@ -4,7 +4,7 @@ let comic = {
   "genero": "Drama musical histórico",
   "sinopsis": "Helena, una princesa nacida bajo una tormenta, desafía las normas de su reino para seguir su verdadera pasión: el canto. A través de su voz, enfrenta prejuicios, amores y traiciones, convirtiéndose en símbolo de libertad y empoderamiento femenino. Su legado trascenderá el tiempo como La Ronca de Oro, inspirando a otras mujeres a cantar sin miedo.",
   "autores": ["Juan José Quintero", "Geraldine Ramirez", "Caleb Olaya"],
-  "portadaComic": "portada_principal.jpg",
+  "portadaComic": "./portada_principal.png",
   "year": "2025",
   "Personajes": [
     {
