@@ -1,0 +1,42 @@
+/* helena.css */
+.personaje-perfil {
+    display: flex;
+    gap: 40px;
+    max-width: var(--max);
+    margin: 50px auto;
+    padding: 0 28px;
+    align-items: flex-start;
+}
+.personaje-imagen {
+    flex: 0 0 400px;
+    height: 500px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.personaje-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.personaje-info h1 {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.personaje-info p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+@media (max-width: 900px) {
+    .personaje-perfil {
+        flex-direction: column;
+    }
+    .personaje-imagen {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 400px;
+    }
+}

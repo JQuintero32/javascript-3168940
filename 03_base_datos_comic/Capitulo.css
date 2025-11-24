@@ -1,0 +1,55 @@
+/* capitulo1.css */
+.capitulo-header {
+    position: relative;
+    height: 400px;
+    background-image: url('capitulo1.jpg'); /* Asegúrate de que esta ruta sea correcta */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+}
+.capitulo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--bg) 0%, rgba(5,6,7,0.5) 100%);
+}
+.capitulo-content {
+    max-width: var(--max);
+    margin: auto;
+    padding: 0 28px;
+}
+.capitulo-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.capitulo-info {
+    color: var(--muted);
+    margin-bottom: 30px;
+    border-left: 4px solid var(--accent);
+    padding-left: 20px;
+}
+.capitulo-info strong {
+    color: #fff;
+}
+.capitulo-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    max-width: 900px;
+    color: #d7dfe4;
+}
+
+.capitulo-video {
+    width: 50%; 
+    max-width: 50%; 
+    margin: 30px auto; 
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.capitulo-video video {
+    width: 50%;
+    height: 50%;
+    display: block;
+}
