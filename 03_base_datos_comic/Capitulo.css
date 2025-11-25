@@ -40,16 +40,16 @@
 }
 
 .capitulo-video {
-    width: 50%; 
-    max-width: 50%; 
-    margin: 30px auto; 
-    border-radius: var(--radius);
+    max-width: 900px; 
+    width: 50%;
+    margin: 30px auto; /* Centra el contenedor y añade espacio */
+    border-radius: var(--radius); /* Usa tu variable para bordes redondeados */
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .capitulo-video video {
     width: 50%;
-    height: 50%;
-    display: block;
+    height: auto;
+    display: block; 
 }
