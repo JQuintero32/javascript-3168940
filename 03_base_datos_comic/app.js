@@ -1,3 +1,5 @@
+import {comic} from "./bd.js"
+
 const heroContainer = document.querySelector("#hero-container");
 
 heroContainer.innerHTML = `
@@ -37,7 +39,7 @@ comic.Personajes.forEach(char => {
     const card = document.createElement("article");
     card.classList.add("card");
 
-    card.innerHTML = `
+    card.innerHTML = ` <a href="./Personaje.html?id=${char.id}">
         <div class="card__thumb">
             <img src="${char.imagen}" alt="Imagen de ${char.nombre}" class="personaje-img">
         </div>
@@ -46,6 +48,7 @@ comic.Personajes.forEach(char => {
             <h3 class="card__title">${char.nombre}</h3>
             <p class="card__text">${char.descripcion}</p>
         </div>
+        </a>
     `;
 
     scrollerPersonajes.appendChild(card);
@@ -59,13 +62,14 @@ comic.capitulos.forEach(capitulo => {
     const card = document.createElement("article");
     card.classList.add("card");
 
-    card.innerHTML = `
+    card.innerHTML = ` <a href="./Capitulo.html?id=${char.id}">
         <div class="card__thumb" style="background-image: url('${capitulo.portada}');"></div>
         <div class="card__body">
             <h3 class="card__title">${capitulo.id}. ${capitulo.nombre}</h3>
             <p class="card__text">${capitulo.descripcion}</p>
             <button class="mini">Ver capítulo</button>
         </div>
+        </a>
     `;
 
     scrollerCapitulos.appendChild(card);

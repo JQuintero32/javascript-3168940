@@ -1,4 +1,4 @@
-let comic = {
+export let comic = {
   "nombreComic": "La princesa ronca de oro",
   "numeroEpisodeos": "3",
   "genero": "Drama musical histórico",
