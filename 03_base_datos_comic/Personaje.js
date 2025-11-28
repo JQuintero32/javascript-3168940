@@ -6,4 +6,75 @@ import { comic } from "./bd"
 const params = new URLSearchParams(window.location.search)
 const id = parseInt ( params.get(id))
 
-console.log("El id del personaje es", id)
+//comparar id del url con id de la base de datos
+const miPersonaje = comic.Personajes.find( p => p.id === id )
+
+
+//console.log("El id del personaje es", miPersonaje)
+const contenidoPersonaje = document.querySelector(".contenido-personaje")
+
+console.log(contenidoPersonaje)
+contenidoPersonaje.innerHTML = `
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personaje: Helena - La Princesa Ronca de Oro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="Personaje.css"> 
+</head>
+<body>
+
+  <header class="header">
+    <div class="brand">
+      <span class="brand__title">Helenía</span>
+    </div>
+
+<nav class="header__nav">
+    <a href="index.html" class="nav__item">Inicio</a>
+    <a href="Capitulo.html" class="nav__item">Capítulos</a>
+    <a href="index.html#scroller-personajes" class="nav__item active">Personajes</a> 
+    </nav>
+
+    <div class="header__right">
+      <button class="icon-btn" aria-label="Buscar">🔍</button>
+      <button class="icon-btn" aria-label="Perfil">👤</button>
+    </div>
+  </header>
+
+  <main class="contenido-personaje">
+    <div class="personaje-perfil">
+      <div class="personaje-imagen">
+        <img src="./Helena.png" alt="Retrato de Helena">
+      </div>
+      <div class="personaje-info">
+        <h1>${miPersonaje.nombre}</h1>
+        <p>
+            Princesa de voz poderosa que desafía las reglas para cantar libremente. 
+            Su medallón simboliza su fuerza y legado eterno.
+        </p>
+        <p>
+            Detalle adicional: Nacida bajo una tormenta, su voz se convierte en un 
+            símbolo de libertad y empoderamiento, transformando la tradición de su reino.
+        </p>
+        <button class="btn btn--primary" onclick="window.location.href='capitulo1.html'">Ver Cómic</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+      <div class="footer__left">
+        <strong>La Princesa Ronca de Oro</strong> · 2025 · Drama musical
+      </div>
+      <div class="footer__right">
+        <small>Autores: Juan, Caleb y Geraldine</small>
+      </div>
+  </footer>
+
+<script type="module" src="./Personaje.js"></script>
+
+</body>
+</html>
+`
