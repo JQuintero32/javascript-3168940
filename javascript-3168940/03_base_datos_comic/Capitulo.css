@@ -1,0 +1,43 @@
+/* Necesario para que el fondo del header tenga altura y se vea */
+.capitulo-header {
+    height: 500px; /* Asegura que la imagen de fondo se vea */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* EL ESTILO MÁS IMPORTANTE: Limitar y centrar el contenedor de todo el contenido */
+.capitulo-content {
+    max-width: 1100px; /* Limita el ancho máximo para evitar desbordes */
+    width: 90%; 
+    margin: -300px auto 50px auto; /* El margen negativo sube el contenido sobre el header */
+    padding: 40px;
+    background-color: var(--bg); /* Usa tu color de fondo principal o un color sólido */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border-radius: 12px;
+    position: relative;
+    z-index: 10; /* Asegura que se vea por encima de otros elementos */
+}
+
+/* CORRECCIÓN DE ESTILO DE VIDEO (Ya lo tenías, pero lo confirmamos) */
+.capitulo-video {
+    max-width: 900px; /* Limita el ancho del contenedor del video */
+    width: 100%; /* El 100% de su contenedor padre (.capitulo-content) */
+    margin: 30px auto;
+    /* ... otros estilos ... */
+}
+
+/* Asegura que el elemento <video> se ajuste a su contenedor limitado */
+.capitulo-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilo para el texto dentro del contenido */
+.capitulo-texto {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repaso conceptos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 40px;
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+    }
+
+    .botones {
+      margin-top: 20px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    /* 🎨 Clases para efectos */
+    .blancoNegro {
+      filter: grayscale(100%);
+    }
+
+    .desenfocar {
+      filter: blur(4px);
+    }
+
+    .zoomRotar {
+      transform: scale(1.4) rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Repaso conceptos</h2>
+
+  <img id="miImagen" src="https://cdn.pixabay.com/photo/2021/04/13/19/41/elephants-6176590_1280.jpg" alt="Elefante">
+
+  <div class="botones">
+    <button id="btnBN">Blanco y Negro</button>
+    <button id="btnDesenfocar">Desenfocar</button>
+    <button id="btnZoomRotar">Zoom y Rotar</button>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
