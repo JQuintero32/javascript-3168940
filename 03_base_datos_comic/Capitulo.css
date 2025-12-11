@@ -1,31 +1,29 @@
-/* Necesario para que el fondo del header tenga altura y se vea */
+
 .capitulo-header {
-    height: 500px; /* Asegura que la imagen de fondo se vea */
+    height: 500px;
     width: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
-/* EL ESTILO MÁS IMPORTANTE: Limitar y centrar el contenedor de todo el contenido */
 .capitulo-content {
-    max-width: 1100px; /* Limita el ancho máximo para evitar desbordes */
-    width: 90%; 
-    margin: -300px auto 50px auto; /* El margen negativo sube el contenido sobre el header */
+    max-width: 1100px;
+    width: 90%;
+    margin: -300px auto 50px auto;
     padding: 40px;
-    background-color: var(--bg); /* Usa tu color de fondo principal o un color sólido */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    border-radius: 12px;
+    background-color: var(--bg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
     position: relative;
-    z-index: 10; /* Asegura que se vea por encima de otros elementos */
+    z-index: 10;
 }
 
-/* CORRECCIÓN DE ESTILO DE VIDEO (Ya lo tenías, pero lo confirmamos) */
+/* CORRECCIÓN DE ESTILO DE VIDEO */
 .capitulo-video {
-    max-width: 900px; /* Limita el ancho del contenedor del video */
-    width: 100%; /* El 100% de su contenedor padre (.capitulo-content) */
+    max-width: 900px;
+    width: 100%;
     margin: 30px auto;
-    /* ... otros estilos ... */
 }
 
 /* Asegura que el elemento <video> se ajuste a su contenedor limitado */
@@ -33,6 +31,8 @@
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 8px;
+    /* Sutil mejora */
 }
 
 /* Estilo para el texto dentro del contenido */
@@ -40,4 +40,55 @@
     line-height: 1.6;
     margin-bottom: 30px;
     padding: 0 20px;
+}
+
+/* Estilo para la información del capítulo */
+.capitulo-info {
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    background: var(--glass);
+    border-radius: 10px;
+}
+
+/* RESPONSIVE (Mejorado) */
+@media (max-width: 900px) {
+    .capitulo-header {
+        height: 350px;
+    }
+
+    .capitulo-content {
+        margin-top: -150px;
+        padding: 30px;
+    }
+
+    .capitulo-video {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .capitulo-header {
+        height: 250px;
+    }
+
+    .capitulo-content {
+        margin-top: -80px;
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .capitulo-content h1 {
+        font-size: 2rem;
+    }
+
+    .capitulo-texto,
+    .capitulo-info {
+        padding: 0 5px;
+        /* Reducir padding horizontal aún más */
+    }
+
+    .capitulo-texto p,
+    .capitulo-info p {
+        font-size: 1rem;
+    }
 }

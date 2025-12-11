@@ -1,6 +1,4 @@
 /* Personaje.css */
-
-/* KEYFRAME para animación de entrada de página */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -15,7 +13,6 @@
 
 .animated-in-page {
     animation: slideIn 1s ease-out;
-    /* Animación de entrada de página */
 }
 
 .personaje-perfil {
@@ -54,7 +51,7 @@
     margin-bottom: 20px;
 }
 
-/* ESTILO PARA BOTÓN VOLVER */
+/* ESTILO PARA BOTÓN VOLVER (Compartido con style.css) */
 .back-btn {
     background: var(--card);
     border: 1px solid var(--muted);
@@ -73,24 +70,39 @@
 }
 
 
-/* RESPONSIVE */
+/* RESPONSIVE (Mejorado) */
 @media (max-width: 900px) {
     .personaje-perfil {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin: 30px auto 50px;
+        gap: 20px;
     }
 
     .personaje-imagen {
         flex: 0 0 auto;
         width: 80%;
-        max-width: 400px;
-        height: 400px;
+        max-width: 450px;
+        height: 450px;
+        border: 4px solid var(--glass);
+    }
+
+    .personaje-info {
+        padding: 0 20px;
     }
 }
 
 @media (max-width: 600px) {
+    .personaje-imagen {
+        height: 300px;
+    }
+
     .personaje-info h1 {
         font-size: 2.5rem;
+    }
+
+    .personaje-info p {
+        font-size: 1rem;
     }
 }

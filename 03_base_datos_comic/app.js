@@ -2,7 +2,7 @@ import { comic } from "./bd.js";
 
 const heroContainer = document.querySelector("#hero-container");
 
-// NUEVA LÓGICA DE CARRUSEL: Incluye la portada principal y luego las portadas de los capítulos.
+// Lógica de Carrusel: Incluye la portada principal y luego las portadas de los capítulos.
 const carruselImagenes = [
     comic.portadaComic, // 1. La portada principal (./portada_principal.png)
     ...comic.capitulos.map(cap => cap.portada) // 2. Las portadas de los capítulos
@@ -12,7 +12,7 @@ let currentImageIndex = 0;
 function updateHeroBackground() {
     // La imagen actual a mostrar
     const imageUrl = carruselImagenes[currentImageIndex];
-    
+    
     // Estructura base del HERO
     heroContainer.innerHTML = `
         <div class="hero__bg" style="background-image: url('${imageUrl}');"></div>
@@ -42,14 +42,14 @@ function updateHeroBackground() {
             </div>
         </div>
     `;
-    
-    // Avanza al siguiente índice, volviendo al inicio si llega al final
+    
+    // Avanza al siguiente índice
     currentImageIndex = (currentImageIndex + 1) % carruselImagenes.length;
 }
 
 // Inicializar el carrusel y establecer el intervalo
 updateHeroBackground();
-setInterval(updateHeroBackground, 5000); // Cambia cada 5 segundos (puedes ajustar este valor)
+setInterval(updateHeroBackground, 5000); // Cambia cada 5 segundos 
 
 // --- Generación de Tarjetas de Personajes ---
 
@@ -58,7 +58,7 @@ scrollerPersonajes.innerHTML = '';
 
 comic.Personajes.forEach(char => {
     const card = document.createElement("article");
-    card.classList.add("card", "animated-card"); // Clase de animación
+    card.classList.add("card", "animated-card"); 
 
     card.innerHTML = ` <a href="./Personaje.html?id=${char.id}">
     <div class="card__thumb">
@@ -83,7 +83,7 @@ scrollerCapitulos.innerHTML = '';
 
 comic.capitulos.forEach(capitulo => {
     const card = document.createElement("article");
-    card.classList.add("card", "animated-card"); // Clase de animación
+    card.classList.add("card", "animated-card"); 
 
     card.innerHTML = ` <a href="./Capitulo.html?id=${capitulo.id}">
     <div class="card__thumb" style="background-image: url('${capitulo.portada}');"></div>
