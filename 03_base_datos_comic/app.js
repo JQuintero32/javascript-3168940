@@ -4,7 +4,7 @@ const heroContainer = document.querySelector("#hero-container");
 
 // Lógica de Carrusel: Incluye la portada principal y luego las portadas de los capítulos.
 const carruselImagenes = [
-    comic.portadaComic, // 1. La portada principal (./portada_principal.png)
+    comic.portadaComic, // 1. La portada principal
     ...comic.capitulos.map(cap => cap.portada) // 2. Las portadas de los capítulos
 ];
 let currentImageIndex = 0;
@@ -43,7 +43,7 @@ function updateHeroBackground() {
         </div>
     `;
     
-    // Avanza al siguiente índice
+    // Avanza al siguiente índice (lógica del carrusel)
     currentImageIndex = (currentImageIndex + 1) % carruselImagenes.length;
 }
 
@@ -51,7 +51,7 @@ function updateHeroBackground() {
 updateHeroBackground();
 setInterval(updateHeroBackground, 5000); // Cambia cada 5 segundos 
 
-// --- Generación de Tarjetas de Personajes ---
+// --- Generación de Tarjetas de Personajes (Uso de forEach) ---
 
 const scrollerPersonajes = document.querySelector("#scroller-personajes");
 scrollerPersonajes.innerHTML = '';
@@ -61,8 +61,7 @@ comic.Personajes.forEach(char => {
     card.classList.add("card", "animated-card"); 
 
     card.innerHTML = ` <a href="./Personaje.html?id=${char.id}">
-    <div class="card__thumb">
-      <img src="${char.imagen}" alt="Imagen de ${char.nombre}" class="personaje-img">
+        <div class="card__thumb" style="background-image: url('${char.imagen}'); background-size: contain; background-color: var(--card);">
     </div>
      
     <div class="card__body">
@@ -76,7 +75,7 @@ comic.Personajes.forEach(char => {
 });
 
 
-// --- Generación de Tarjetas de Capítulos ---
+// --- Generación de Tarjetas de Capítulos (Uso de forEach) ---
 
 const scrollerCapitulos = document.querySelector("#scroller-capitulos");
 scrollerCapitulos.innerHTML = '';

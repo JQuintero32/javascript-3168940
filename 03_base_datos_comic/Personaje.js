@@ -7,7 +7,7 @@ const id = parseInt(params.get('id')); 
 
 const miPersonaje = comic.Personajes.find(p => p.id === id);
 
-
+// REDIRECCIÓN SI EL ID ES INVÁLIDO O EL PERSONAJE NO EXISTE (Seguridad)
 if (isNaN(id) || !miPersonaje) {
     
     window.location.href = 'index.html';
@@ -16,7 +16,7 @@ if (isNaN(id) || !miPersonaje) {
 
 const personajePerfil = document.querySelector(".personaje-perfil");
 
-
+// El código para mostrar el personaje
 if (miPersonaje) {
     personajePerfil.innerHTML = `
         <div class="personaje-imagen">

@@ -1,12 +1,15 @@
-
+/* Capitulo.css */
+/* Necesario para que el fondo del header tenga altura y se vea */
 .capitulo-header {
     height: 500px;
+    /* Asegura que la imagen de fondo se vea */
     width: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
+/* EL ESTILO MÁS IMPORTANTE: Limitar y centrar el contenedor de todo el contenido */
 .capitulo-content {
     max-width: 1100px;
     width: 90%;
