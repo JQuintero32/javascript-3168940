@@ -3,20 +3,21 @@
 import { comic } from "./bd.js";
 
 const params = new URLSearchParams(window.location.search);
-const id = parseInt(params.get('id')); 
+const id = parseInt(params.get('id')); 
 
 const miPersonaje = comic.Personajes.find(p => p.id === id);
 
 // REDIRECCIÓN SI EL ID ES INVÁLIDO O EL PERSONAJE NO EXISTE (Seguridad)
+// Solo redirigimos, no usamos 'return' para evitar el error de sintaxis.
 if (isNaN(id) || !miPersonaje) {
     
     window.location.href = 'index.html';
-    return; // Detiene la ejecución del script
+    // Se eliminó el 'return;' que causaba el 'Illegal return statement'
 }
 
 const personajePerfil = document.querySelector(".personaje-perfil");
 
-// El código para mostrar el personaje
+// El código para mostrar el personaje se ejecuta SOLO si miPersonaje existe
 if (miPersonaje) {
     personajePerfil.innerHTML = `
         <div class="personaje-imagen">

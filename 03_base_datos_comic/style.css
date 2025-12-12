@@ -326,6 +326,8 @@ body {
 /* Las imágenes de Personajes usan background-size: contain; para que se vean completas */
 .scroller#scroller-personajes .card__thumb {
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
