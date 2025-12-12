@@ -327,7 +327,9 @@ body {
 .scroller#scroller-personajes .card__thumb {
     background-size: contain;
     background-repeat: no-repeat;
+    /* CORRECCIÓN: Evita la repetición */
     background-position: center;
+    /* CORRECCIÓN: Centra la imagen */
 }
 
 
@@ -336,6 +338,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    height: 100%;
+    /* CORRECCIÓN: Permite que el flexbox use toda la altura de la tarjeta */
 }
 
 .card__title {
@@ -348,9 +352,12 @@ body {
     color: var(--muted);
     font-size: .95rem;
     flex: 1;
+    /* Permite que este elemento se estire y empuje el botón hacia abajo */
 }
 
 .mini {
+    margin-top: auto;
+    /* CORRECCIÓN: Empuja este elemento hasta el fondo del contenedor flex */
     background: transparent;
     border: 1px solid var(--accent);
     padding: 8px 12px;
